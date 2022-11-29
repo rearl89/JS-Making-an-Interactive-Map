@@ -9,13 +9,13 @@ const myMap = {
 	buildMap() {
 		this.map = L.map('map', {
 		center: this.coordinates,
-		zoom: 11,
+		zoom: 16,
 		});
 		// add openstreetmap tiles
 		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution:
 			'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-		minZoom: '15',
+		minZoom: '10', maxZoom: '18'
 		}).addTo(this.map)
 		// create and add geolocation marker
 		const marker = L.marker(this.coordinates)
